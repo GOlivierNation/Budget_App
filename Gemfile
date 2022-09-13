@@ -3,8 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.4'
 
-gem 'devise'
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 
@@ -37,6 +35,9 @@ gem 'rdoc', '~> 4.2', '>= 4.2.2'
 
 # Add rdoc-data
 gem 'rdoc-data', '~> 4.1'
+
+# Add devise for authentication
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
