@@ -419,275 +419,890 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.0ms | Allocations: 3240)
 
 
-Started GET "/" for 127.0.0.1 at 2022-09-14 08:59:08 -0400
+Started GET "/" for 127.0.0.1 at 2022-09-14 09:24:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (37.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1948.8ms | Allocations: 44073)
+  Rendered layout layouts/application.html.erb (Duration: 2149.1ms | Allocations: 58096)
+Completed 200 OK in 2434ms (Views: 2219.3ms | ActiveRecord: 0.0ms | Allocations: 70338)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:25:10 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 894)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 401.9ms | Allocations: 5752)
+  Rendered layout layouts/application.html.erb (Duration: 405.6ms | Allocations: 8046)
+Completed 200 OK in 536ms (Views: 408.1ms | ActiveRecord: 58.4ms | Allocations: 16963)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:25:30 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"olivier@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (51.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "olivier@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 562ms (ActiveRecord: 51.3ms | Allocations: 5476)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:25:32 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"olivier@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "olivier@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 313ms (ActiveRecord: 1.5ms | Allocations: 1857)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:56:20 -0400
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by UsersController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 125.7ms | Allocations: 3924)
-  Rendered layout layouts/application.html.erb (Duration: 126.1ms | Allocations: 4030)
-Completed 500 Internal Server Error in 525ms (ActiveRecord: 0.0ms | Allocations: 15297)
+  Rendered users/index.html.erb within layouts/application (Duration: 636.0ms | Allocations: 106377)
+  Rendered layout layouts/application.html.erb (Duration: 660.9ms | Allocations: 120719)
+Completed 200 OK in 840ms (Views: 715.4ms | ActiveRecord: 0.0ms | Allocations: 134760)
 
 
-  
-ActionView::Template::Error (The asset "budget.svg" is not present in the asset pipeline.
-):
-    1: <div class="container-splash">
-    2:   <h1 class="header">Pig Budget</h1>
-    3:   <div class="splash">
-    4:     <%= image_tag "budget.svg", { class: 'logo' } %>
-    5:   </div>
-    6:   <% if current_user.nil? %>
-    7:     <div class="links">
-  
-app/views/users/index.html.erb:4
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:00:33 -0400
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 501)
-  Rendered layout layouts/application.html.erb (Duration: 1057.8ms | Allocations: 98408)
-Completed 200 OK in 1068ms (Views: 1063.5ms | ActiveRecord: 0.0ms | Allocations: 99974)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:00:37 -0400
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 13:56:28 -0400
 Processing by Devise::SessionsController#new as HTML
   Rendering layout layouts/application.html.erb
   Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2236)
-  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2321)
-Completed 500 Internal Server Error in 124ms (ActiveRecord: 5.8ms | Allocations: 22408)
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 921)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 259.1ms | Allocations: 9088)
+  Rendered layout layouts/application.html.erb (Duration: 264.3ms | Allocations: 11510)
+Completed 200 OK in 355ms (Views: 267.2ms | ActiveRecord: 14.2ms | Allocations: 31637)
 
 
-  
-ActionView::Template::Error (The asset "arrow_left.png" is not present in the asset pipeline.
-):
-    1: <div class="container-full">
-    2:   <div class="header-block">
-    3:     <%= link_to image_tag('arrow_left.png'), root_path, { 'class': 'arrow'} %>
-    4:     <span class="main-title">LOG IN</span>
-    5:     <span class="right-text">Next</span>
-    6:   </div>
-  
-app/views/devise/sessions/new.html.erb:3
-Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:02:51 -0400
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:56:33 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 743)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2880)
+Completed 200 OK in 18ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 3607)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 13:56:35 -0400
 Processing by Devise::SessionsController#new as HTML
   Rendering layout layouts/application.html.erb
   Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2229)
-  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2314)
-Completed 500 Internal Server Error in 35ms (ActiveRecord: 11.7ms | Allocations: 7313)
+  Rendered devise/shared/_links.html.erb (Duration: 3.6ms | Allocations: 160)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1312)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 3546)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 4323)
 
 
-  
-ActionView::Template::Error (The asset "arrow_left.png" is not present in the asset pipeline.
-):
-    1: <div class="container-full">
-    2:   <div class="header-block">
-    3:     <%= link_to image_tag('arrow_left.png'), root_path, { 'class': 'arrow'} %>
-    4:     <span class="main-title">LOG IN</span>
-    5:     <span class="right-text">Next</span>
-    6:   </div>
-  
-app/views/devise/sessions/new.html.erb:3
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:03:38 -0400
-  [1m[36mActiveRecord::SchemaMigration Pluck (51.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 470.6ms | Allocations: 97020)
-  Rendered layout layouts/application.html.erb (Duration: 491.9ms | Allocations: 111096)
-Completed 200 OK in 623ms (Views: 496.0ms | ActiveRecord: 0.0ms | Allocations: 120914)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:03:42 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (Duration: 24.3ms | Allocations: 920)
-  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 856.8ms | Allocations: 9506)
-  Rendered layout layouts/application.html.erb (Duration: 863.7ms | Allocations: 11731)
-Completed 200 OK in 944ms (Views: 867.0ms | ActiveRecord: 8.4ms | Allocations: 31479)
-
-
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:03:45 -0400
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 59.8ms | Allocations: 715)
-  Rendered layout layouts/application.html.erb (Duration: 70.4ms | Allocations: 2808)
-Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.0ms | Allocations: 3526)
-
-
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:04:36 -0400
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 176.3ms | Allocations: 25097)
-  Rendered layout layouts/application.html.erb (Duration: 182.4ms | Allocations: 27582)
-Completed 200 OK in 202ms (Views: 200.4ms | ActiveRecord: 0.0ms | Allocations: 29028)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:04:40 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (Duration: 4.7ms | Allocations: 600)
-  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2831)
-  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 4983)
-Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 6521)
-
-
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:04:44 -0400
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 691)
-  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 2786)
-Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.0ms | Allocations: 3482)
-
-
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:05:40 -0400
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1141)
-  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 3610)
-Completed 200 OK in 42ms (Views: 38.7ms | ActiveRecord: 0.0ms | Allocations: 5057)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:05:53 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 600)
-  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2819)
-  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 4955)
-Completed 200 OK in 49ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 6502)
-
-
-Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-14 09:05:59 -0400
-Processing by Devise::RegistrationsController#new as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 232)
-  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 235)
-  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 37.5ms | Allocations: 2860)
-  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 4997)
-Completed 200 OK in 69ms (Views: 49.0ms | ActiveRecord: 0.0ms | Allocations: 6605)
-
-
-Started POST "/users" for 127.0.0.1 at 2022-09-14 09:06:02 -0400
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
-  Rendering layout layouts/application.html.erb
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_error_messages.html.erb (Duration: 5.0ms | Allocations: 1938)
-  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 107)
-  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4869)
-  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 7007)
-Completed 200 OK in 118ms (Views: 26.0ms | ActiveRecord: 0.0ms | Allocations: 10701)
-
-
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:06:07 -0400
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 679)
-  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 2758)
-Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.0ms | Allocations: 3415)
-
-
-Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-14 09:06:11 -0400
-Processing by Devise::RegistrationsController#new as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
-  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 93)
-  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1539)
-  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 3598)
-Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 4309)
-
-
-Started POST "/users" for 127.0.0.1 at 2022-09-14 09:06:24 -0400
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Olivier", "email"=>"olivier@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
-  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Exists? (294.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "olivier@gmail.com"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (11.7ms)[0m  [1m[31mROLLBACK[0m
-  Rendering layout layouts/application.html.erb
-  Rendering devise/registrations/new.html.erb within layouts/application
-  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 568)
-  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 107)
-  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2612)
-  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4747)
-Completed 200 OK in 1609ms (Views: 16.2ms | ActiveRecord: 306.8ms | Allocations: 13960)
-
-
-Started POST "/users" for 127.0.0.1 at 2022-09-14 09:06:45 -0400
-Processing by Devise::RegistrationsController#create as HTML
-  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Olivier", "email"=>"olivier2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"SIGN UP"}
-  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "olivier2@gmail.com"], ["LIMIT", 1]]
-  [1m[36mUser Create (188.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "role") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Olivier"], ["created_at", "2022-09-14 13:06:46.710201"], ["updated_at", "2022-09-14 13:06:46.710201"], ["email", "olivier2@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["role", "admin"]]
-  [1m[36mTRANSACTION (15.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-14 13:56:48 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"olivier2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"LOG IN"}
+  [1m[36mUser Load (43.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "olivier2@gmail.com"], ["LIMIT", 1]]
 Redirected to http://127.0.0.1:3000/
-Completed 302 Found in 588ms (ActiveRecord: 204.9ms | Allocations: 7486)
+Completed 302 Found in 559ms (ActiveRecord: 43.8ms | Allocations: 8781)
 
 
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:06:47 -0400
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:56:48 -0400
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms | Allocations: 1340)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:56:48 -0400
+Processing by CategoriesController#index as TURBO_STREAM
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (26.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 72.8ms | Allocations: 3886)
+  Rendered layout layouts/application.html.erb (Duration: 119.2ms | Allocations: 6368)
+Completed 200 OK in 258ms (Views: 95.2ms | ActiveRecord: 28.3ms | Allocations: 22111)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 13:56:51 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 53.8ms | Allocations: 2564)
+  Rendered layout layouts/application.html.erb (Duration: 60.4ms | Allocations: 4939)
+Completed 200 OK in 162ms (Views: 61.3ms | ActiveRecord: 3.5ms | Allocations: 33012)
+
+
+Started POST "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:56:57 -0400
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"user_id"=>"3", "name"=>"cat 2", "icon"=>"Transportation.png"}, "commit"=>"Create Category", "user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mCategory Create (299.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "cat 2"], ["icon", "Transportation.png"], ["created_at", "2022-09-14 17:56:57.349705"], ["updated_at", "2022-09-14 17:56:57.349705"], ["user_id", 3]]
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (43.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 363ms (ActiveRecord: 343.6ms | Allocations: 4822)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:56:57 -0400
+Processing by CategoriesController#index as TURBO_STREAM
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3573)
+Completed 200 OK in 23ms (Views: 13.0ms | ActiveRecord: 1.1ms | Allocations: 4946)
+
+
+Started GET "/users/3/categories/1" for 127.0.0.1 at 2022-09-14 13:57:00 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 153)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2635)
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 2.7ms | Allocations: 4158)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:57:42 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3503)
+Completed 200 OK in 27ms (Views: 19.9ms | ActiveRecord: 1.2ms | Allocations: 4799)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:57:48 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 1138)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:57:48 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (3.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 3502)
+Completed 200 OK in 36ms (Views: 18.7ms | ActiveRecord: 8.2ms | Allocations: 4812)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:57:55 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms | Allocations: 1129)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:57:55 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 3504)
+Completed 200 OK in 30ms (Views: 18.6ms | ActiveRecord: 0.6ms | Allocations: 4811)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 13:57:59 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1311)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3547)
+Completed 200 OK in 39ms (Views: 24.3ms | ActiveRecord: 1.5ms | Allocations: 8286)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 13:58:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms | Allocations: 1610)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:58:00 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms | Allocations: 1152)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:58:00 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 3508)
+Completed 200 OK in 34ms (Views: 23.6ms | ActiveRecord: 1.0ms | Allocations: 4836)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:58:01 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms | Allocations: 1145)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:58:01 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1373)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 3508)
+Completed 200 OK in 46ms (Views: 31.0ms | ActiveRecord: 1.6ms | Allocations: 4824)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 13:58:05 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1135)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 13:58:05 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 3504)
+Completed 200 OK in 44ms (Views: 33.3ms | ActiveRecord: 2.6ms | Allocations: 4820)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:00:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 292ms (ActiveRecord: 5.1ms | Allocations: 27090)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:00:47 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 221.7ms | Allocations: 55336)
+  Rendered layout layouts/application.html.erb (Duration: 270.9ms | Allocations: 69604)
+Completed 200 OK in 397ms (Views: 286.6ms | ActiveRecord: 11.2ms | Allocations: 85401)
+
+
+Started GET "/users/3/categories/1" for 127.0.0.1 at 2022-09-14 14:00:58 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2630)
+Completed 200 OK in 23ms (Views: 15.0ms | ActiveRecord: 0.4ms | Allocations: 4315)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 14:01:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 16ms (ActiveRecord: 0.4ms | Allocations: 3113)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:01:13 -0400
 Processing by UsersController#index as HTML
   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
   ↳ app/controllers/users_controller.rb:3:in `index'
 Redirected to http://127.0.0.1:3000/users/3/categories
-Completed 302 Found in 76ms (ActiveRecord: 27.5ms | Allocations: 1599)
+Completed 302 Found in 17ms (ActiveRecord: 1.0ms | Allocations: 1149)
 
 
-Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 09:06:47 -0400
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:01:13 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1510)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 3666)
+Completed 200 OK in 32ms (Views: 24.7ms | ActiveRecord: 1.9ms | Allocations: 5047)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:01:17 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 3220)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 5573)
+Completed 200 OK in 55ms (Views: 31.2ms | ActiveRecord: 0.4ms | Allocations: 13088)
+
+
+Started POST "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:01:25 -0400
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"user_id"=>"3", "name"=>"gtr", "icon"=>"Supplies.png"}, "commit"=>"Create Category", "user_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "gtr"], ["icon", "Supplies.png"], ["created_at", "2022-09-14 18:01:25.816805"], ["updated_at", "2022-09-14 18:01:25.816805"], ["user_id", 3]]
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (49.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 70ms (ActiveRecord: 50.8ms | Allocations: 4918)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:01:25 -0400
+Processing by CategoriesController#index as TURBO_STREAM
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1996)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4143)
+Completed 200 OK in 41ms (Views: 25.7ms | ActiveRecord: 1.5ms | Allocations: 5586)
+
+
+Started GET "/users/3/categories/2" for 127.0.0.1 at 2022-09-14 14:01:28 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"2"}
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2470)
+Completed 200 OK in 29ms (Views: 17.1ms | ActiveRecord: 1.2ms | Allocations: 3319)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:09:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 161ms (ActiveRecord: 6.8ms | Allocations: 27101)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:09:15 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 441.0ms | Allocations: 56890)
+  Rendered layout layouts/application.html.erb (Duration: 473.5ms | Allocations: 71178)
+Completed 200 OK in 668ms (Views: 482.7ms | ActiveRecord: 6.4ms | Allocations: 86990)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:09:29 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 28.7ms | Allocations: 4194)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 6553)
+Completed 200 OK in 103ms (Views: 45.6ms | ActiveRecord: 0.7ms | Allocations: 14361)
+
+
+Started POST "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:09:42 -0400
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"user_id"=>"3", "name"=>"business1", "icon"=>"Business.png"}, "commit"=>"Create Category", "user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "business1"], ["icon", "Business.png"], ["created_at", "2022-09-14 18:09:42.038575"], ["updated_at", "2022-09-14 18:09:42.038575"], ["user_id", 3]]
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (50.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 85ms (ActiveRecord: 51.8ms | Allocations: 4956)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:09:42 -0400
+Processing by CategoriesController#index as TURBO_STREAM
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2509)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4662)
+Completed 200 OK in 33ms (Views: 26.6ms | ActiveRecord: 1.1ms | Allocations: 6110)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:15:52 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 79.0ms | Allocations: 10897)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 22.5ms | Allocations: 16204)
+
+
+  
+ActionView::Template::Error (The asset "Supplies.png" is not present in the asset pipeline.
+):
+    12:     <li class="cat-card">
+    13:       <div class="cat-details">
+    14:         <div>
+    15:           <p class="cat-icon"><%= image_tag category.icon %></p>
+    16:         </div>
+    17:         <div>
+    18:           <%= link_to "/users/#{current_user.id}/categories/#{category.id}", class: "cat-link" do %>
+  
+app/views/categories/index.html.erb:15
+app/views/categories/index.html.erb:11
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:17:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 169ms (ActiveRecord: 6.5ms | Allocations: 27075)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:17:24 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 335.7ms | Allocations: 60484)
+Completed 500 Internal Server Error in 465ms (ActiveRecord: 15.2ms | Allocations: 76369)
+
+
+  
+ActionView::Template::Error (The asset "Supplies.png" is not present in the asset pipeline.
+):
+    12:     <li class="cat-card">
+    13:       <div class="cat-details">
+    14:         <div>
+    15:           <p class="cat-icon"><%= image_tag category.icon %></p>
+    16:         </div>
+    17:         <div>
+    18:           <%= link_to "/users/#{current_user.id}/categories/#{category.id}", class: "cat-link" do %>
+  
+app/views/categories/index.html.erb:15
+app/views/categories/index.html.erb:11
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:18:23 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 191.6ms | Allocations: 29624)
+Completed 200 OK in 201ms (Views: 192.6ms | ActiveRecord: 1.0ms | Allocations: 31244)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:18:27 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 14.6ms | Allocations: 2351)
+Completed 200 OK in 46ms (Views: 16.2ms | ActiveRecord: 2.3ms | Allocations: 3720)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:18:29 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 16.5ms | Allocations: 2353)
+Completed 200 OK in 39ms (Views: 18.8ms | ActiveRecord: 2.9ms | Allocations: 3716)
+
+
+Started GET "/users/3/categories/1" for 127.0.0.1 at 2022-09-14 14:18:32 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+  Rendering categories/show.html.erb
+  Rendered categories/show.html.erb (Duration: 17.9ms | Allocations: 120)
+Completed 200 OK in 37ms (Views: 28.1ms | ActiveRecord: 0.5ms | Allocations: 1683)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:18:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 207ms (ActiveRecord: 6.2ms | Allocations: 27087)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:18:57 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 232.4ms | Allocations: 43370)
+Completed 200 OK in 327ms (Views: 242.7ms | ActiveRecord: 15.5ms | Allocations: 59308)
+
+
+Started GET "/users/3/categories/3" for 127.0.0.1 at 2022-09-14 14:19:01 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"user_id"=>"3", "id"=>"3"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+  Rendering categories/show.html.erb
+  Rendered categories/show.html.erb (Duration: 0.9ms | Allocations: 150)
+Completed 200 OK in 14ms (Views: 5.8ms | ActiveRecord: 1.1ms | Allocations: 1888)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:19:06 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 3806)
+
+
+  
+Sprockets::Rails::Helper::AssetNotFound (The asset "Food.png" is not present in the asset pipeline.
+):
+  
+app/controllers/categories_controller.rb:16:in `new'
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:20:02 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.1ms | Allocations: 3110)
+
+
+  
+Sprockets::Rails::Helper::AssetNotFound (The asset "Food.png" is not present in the asset pipeline.
+):
+  
+app/controllers/categories_controller.rb:16:in `new'
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:20:05 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms | Allocations: 2866)
+
+
+  
+Sprockets::Rails::Helper::AssetNotFound (The asset "Food.png" is not present in the asset pipeline.
+):
+  
+app/controllers/categories_controller.rb:16:in `new'
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:20:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 310ms (ActiveRecord: 12.9ms | Allocations: 27087)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:20:26 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 328.8ms | Allocations: 56806)
+Completed 200 OK in 419ms (Views: 341.7ms | ActiveRecord: 10.2ms | Allocations: 72729)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:20:28 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.5ms | Allocations: 8179)
+
+
+  
+Sprockets::Rails::Helper::AssetNotFound (The asset "Repairs.png" is not present in the asset pipeline.
+):
+  
+app/controllers/categories_controller.rb:26:in `new'
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:20:44 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 5.8ms | Allocations: 5641)
+
+
+  
+Sprockets::Rails::Helper::AssetNotFound (The asset "Repairs.png" is not present in the asset pipeline.
+):
+  
+app/controllers/categories_controller.rb:26:in `new'
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:21:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 191ms (ActiveRecord: 4.7ms | Allocations: 27090)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:21:08 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 293.0ms | Allocations: 56455)
+Completed 200 OK in 365ms (Views: 296.5ms | ActiveRecord: 15.2ms | Allocations: 72396)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:21:11 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering categories/new.html.erb
+  Rendered categories/new.html.erb (Duration: 38.0ms | Allocations: 4262)
+Completed 200 OK in 72ms (Views: 39.6ms | ActiveRecord: 0.4ms | Allocations: 12032)
+
+
+Started POST "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:21:18 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"user_id"=>"3", "name"=>"cat 2", "icon"=>"Repairs.png"}, "commit"=>"Create Category", "user_id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "cat 2"], ["icon", "Repairs.png"], ["created_at", "2022-09-14 18:21:18.452310"], ["updated_at", "2022-09-14 18:21:18.452310"], ["user_id", 3]]
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (75.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 101ms (ActiveRecord: 77.0ms | Allocations: 4950)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:21:18 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (6.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 60.2ms | Allocations: 2986)
+Completed 200 OK in 81ms (Views: 55.2ms | ActiveRecord: 8.4ms | Allocations: 4388)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:28:21 -0400
+Started GET "/users/3/categories/1" for 127.0.0.1 at 2022-09-14 14:28:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (125.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+Processing by UsersController#index as HTML
+  Parameters: {"user_id"=>"3", "id"=>"1"}
+  [1m[36mUser Load (30.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 470ms (ActiveRecord: 130.0ms | Allocations: 39532)
+
+
+  [1m[36mCategory Load (153.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:7:in `show'
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:28:26 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/show.html.erb
+  Rendering categories/index.html.erb
+  Rendered categories/show.html.erb (Duration: 65.9ms | Allocations: 1719)
+Completed 200 OK in 803ms (Views: 168.5ms | ActiveRecord: 159.2ms | Allocations: 66001)
+
+
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 499.8ms | Allocations: 31626)
+Completed 200 OK in 662ms (Views: 512.4ms | ActiveRecord: 1.6ms | Allocations: 39403)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 14:28:41 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:3:in `index'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms | Allocations: 1360)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:28:41 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 13.4ms | Allocations: 2885)
+Completed 200 OK in 34ms (Views: 13.9ms | ActiveRecord: 3.6ms | Allocations: 4286)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:28:46 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering categories/new.html.erb
+  Rendered categories/new.html.erb (Duration: 109.8ms | Allocations: 4253)
+Completed 200 OK in 193ms (Views: 111.8ms | ActiveRecord: 0.3ms | Allocations: 11913)
+
+
+Started POST "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:28:53 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"user_id"=>"3", "name"=>"dd", "icon"=>"Food.png"}, "commit"=>"Create Category", "user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mCategory Create (144.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "dd"], ["icon", "Food.png"], ["created_at", "2022-09-14 18:28:53.247659"], ["updated_at", "2022-09-14 18:28:53.247659"], ["user_id", 3]]
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 181ms (ActiveRecord: 166.9ms | Allocations: 4922)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:28:53 -0400
+Processing by CategoriesController#index as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 12.8ms | Allocations: 3485)
+Completed 200 OK in 20ms (Views: 12.8ms | ActiveRecord: 2.4ms | Allocations: 4919)
+
+
+Started GET "/users/3/categories/new" for 127.0.0.1 at 2022-09-14 14:28:59 -0400
+Processing by CategoriesController#new as HTML
+  Parameters: {"user_id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:11:in `new'
+  Rendering categories/new.html.erb
+  Rendered categories/new.html.erb (Duration: 3.2ms | Allocations: 1365)
+Completed 200 OK in 19ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 6119)
+
+
+Started POST "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:29:06 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"user_id"=>"3", "name"=>"tr", "icon"=>"Transportation.png"}, "commit"=>"Create Category", "user_id"=>"3"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:31:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mCategory Create (1.7ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tr"], ["icon", "Transportation.png"], ["created_at", "2022-09-14 18:29:06.291757"], ["updated_at", "2022-09-14 18:29:06.291757"], ["user_id", 3]]
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (54.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:34:in `create'
+Redirected to http://127.0.0.1:3000/users/3/categories
+Completed 302 Found in 83ms (ActiveRecord: 63.2ms | Allocations: 3427)
+
+
+Started GET "/users/3/categories" for 127.0.0.1 at 2022-09-14 14:29:06 -0400
 Processing by CategoriesController#index as HTML
   Parameters: {"user_id"=>"3"}
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
-  ↳ app/controllers/categories_controller.rb:8:in `index'
-  Rendering layout layouts/application.html.erb
-  Rendering categories/index.html.erb within layouts/application
-  Rendered categories/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 488)
-  Rendered layout layouts/application.html.erb (Duration: 83.1ms | Allocations: 2878)
-Completed 200 OK in 626ms (Views: 118.7ms | ActiveRecord: 0.3ms | Allocations: 18546)
-
-
-Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-14 09:06:56 -0400
-Processing by Devise::SessionsController#destroy as TURBO_STREAM
-  Parameters: {"authenticity_token"=>"[FILTERED]"}
-  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
-Redirected to http://127.0.0.1:3000/
-Completed 302 Found in 66ms (ActiveRecord: 0.3ms | Allocations: 3134)
-
-
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:06:56 -0400
-Processing by UsersController#index as TURBO_STREAM
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 788)
-  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2910)
-Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3668)
-
-
-Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-14 09:07:10 -0400
-Processing by Devise::SessionsController#new as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 160)
-  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 35.1ms | Allocations: 1683)
-  Rendered layout layouts/application.html.erb (Duration: 50.0ms | Allocations: 3748)
-Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.0ms | Allocations: 4541)
-
-
-Started GET "/" for 127.0.0.1 at 2022-09-14 09:07:34 -0400
-Processing by UsersController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering users/index.html.erb within layouts/application
-  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 679)
-  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2757)
-Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 3353)
+  ↳ app/controllers/categories_controller.rb:3:in `index'
+  Rendering categories/index.html.erb
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/categories/index.html.erb:11
+  Rendered categories/index.html.erb (Duration: 23.5ms | Allocations: 3681)
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 0.7ms | Allocations: 5037)
 
 
