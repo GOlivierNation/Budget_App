@@ -1,8 +1,8 @@
-<div class="container">
-  <h1 class="header">Pig Budget</h1>
-  <di class="splash">
+<div class="container-splash">
+  <h1 class="header">PIG BUDGET</h1>
+  <div class="splash">
     <%= image_tag "budget.svg", { class: 'logo' } %>
-  </di>
+  </div>
   <% if current_user.nil? %>
     <div class="links">
       <%= link_to 'LOG IN', new_user_session_path, { class: 'btn-login'} %>
