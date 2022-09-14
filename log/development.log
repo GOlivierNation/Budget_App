@@ -326,3 +326,355 @@ Processing by Devise::SessionsController#create as TURBO_STREAM
 Completed 401 Unauthorized in 409ms (ActiveRecord: 0.3ms | Allocations: 1646)
 
 
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:52:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 586)
+  Rendered layout layouts/application.html.erb (Duration: 283.9ms | Allocations: 35672)
+Completed 200 OK in 658ms (Views: 337.3ms | ActiveRecord: 0.0ms | Allocations: 48178)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-13 18:52:15 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 270)
+  Rendered devise/shared/_links.html.erb (Duration: 18.0ms | Allocations: 724)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 211.7ms | Allocations: 6167)
+  Rendered layout layouts/application.html.erb (Duration: 215.6ms | Allocations: 8551)
+Completed 200 OK in 324ms (Views: 217.4ms | ActiveRecord: 46.4ms | Allocations: 28181)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:52:54 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 87.0ms | Allocations: 6635)
+Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 0.0ms | Allocations: 7339)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:52:56 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2244)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 2851)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:52:57 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2243)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 2843)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:52:57 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2244)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 2845)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:53:00 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2244)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:53:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 586)
+  Rendered layout layouts/application.html.erb (Duration: 114.9ms | Allocations: 43330)
+Completed 200 OK in 214ms (Views: 117.6ms | ActiveRecord: 0.0ms | Allocations: 53142)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-13 18:53:33 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 270)
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 724)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 24.2ms | Allocations: 6167)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 8549)
+Completed 200 OK in 86ms (Views: 36.2ms | ActiveRecord: 6.8ms | Allocations: 28170)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-13 18:53:50 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1250)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 3444)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 4273)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:55:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 32.9ms | Allocations: 3377)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 3483)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms | Allocations: 13254)
+
+
+  
+ActionView::Template::Error (The asset "splash.gif" is not present in the asset pipeline.
+):
+    1: <div class="container-splash">
+    2:   <h1 class="header">Budget</h1>
+    3:   <di class="splash"v>
+    4:     <%= image_tag "splash.gif", { class: 'logo' } %>
+    5:   </di>
+    6:   <% if current_user.nil? %>
+    7:     <div class="links">
+  
+app/views/users/index.html.erb:4
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:56:00 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 101.2ms | Allocations: 35416)
+Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.0ms | Allocations: 37000)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-13 18:56:05 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 901)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 96.8ms | Allocations: 6246)
+  Rendered layout layouts/application.html.erb (Duration: 102.5ms | Allocations: 8628)
+Completed 200 OK in 138ms (Views: 106.7ms | ActiveRecord: 4.2ms | Allocations: 28357)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:57:55 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 117.9ms | Allocations: 26565)
+  Rendered layout layouts/application.html.erb (Duration: 125.5ms | Allocations: 29012)
+Completed 200 OK in 133ms (Views: 130.4ms | ActiveRecord: 0.0ms | Allocations: 30549)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-13 18:58:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 574)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 2301)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 4694)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 6253)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-13 18:58:17 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 232)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 227)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.8ms | Allocations: 2407)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 4799)
+Completed 200 OK in 36ms (Views: 29.9ms | ActiveRecord: 0.0ms | Allocations: 6410)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:58:47 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3609)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 5134)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:58:48 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2818)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3484)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:58:48 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2818)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 3436)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 18:59:18 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 3609)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 5050)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:00:39 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 5684)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 7196)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:46 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 4824)
+Completed 200 OK in 36ms (Views: 32.7ms | Allocations: 5485)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:47 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 2818)
+Completed 200 OK in 23ms (Views: 20.0ms | Allocations: 3421)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:47 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2818)
+Completed 200 OK in 11ms (Views: 10.1ms | Allocations: 3424)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:48 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2818)
+Completed 200 OK in 9ms (Views: 6.7ms | Allocations: 3418)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:48 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2818)
+Completed 200 OK in 11ms (Views: 10.0ms | Allocations: 3409)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:57 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 5245)
+Completed 200 OK in 36ms (Views: 32.8ms | Allocations: 5842)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:58 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2818)
+Completed 200 OK in 16ms (Views: 13.1ms | Allocations: 3433)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:01:58 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2818)
+Completed 200 OK in 9ms (Views: 5.7ms | Allocations: 3436)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:02:15 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 4835)
+Completed 200 OK in 18ms (Views: 16.5ms | Allocations: 5429)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:02:15 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2818)
+Completed 200 OK in 9ms (Views: 6.9ms | Allocations: 3439)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:02:15 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 2828)
+Completed 200 OK in 42ms (Views: 40.1ms | Allocations: 3434)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:03:16 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 702)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 3463)
+Completed 200 OK in 23ms (Views: 20.7ms | Allocations: 4081)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-13 19:03:35 -0400
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 3618)
+Completed 200 OK in 39ms (Views: 35.9ms | Allocations: 5077)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-13 19:03:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 10.6ms | Allocations: 574)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.7ms | Allocations: 2301)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 4699)
+Completed 200 OK in 54ms (Views: 51.2ms | Allocations: 6246)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-09-13 19:05:18 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.7ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 93)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2102)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4494)
+Completed 200 OK in 22ms (Views: 19.9ms | Allocations: 5932)
+
+
