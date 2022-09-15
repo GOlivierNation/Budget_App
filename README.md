@@ -5,7 +5,7 @@
 
 
 ## Live demo:
-You can check out the live demo [here](#).
+You can check out the live demo [here](https://pibudget.herokuapp.com/).
 
 ## Video Demo:
 You can check out the video demo [here](https://www.loom.com/share/11aa36f0a6ed43fc9b6914506b175d2b).
