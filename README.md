@@ -10,9 +10,6 @@ You can check out the live demo [here](#).
 ## Video Demo:
 You can check out the video demo [here](https://www.loom.com/share/11aa36f0a6ed43fc9b6914506b175d2b).
 
-
-![Animation](https://user-images.githubusercontent.com/50721479/190150479-bc759674-9c64-45c2-8fb2-f2b08507d049.gif)
-
 ## Entity Relationship Diagram
 <img src="https://user-images.githubusercontent.com/50721479/190148367-be9ac1c0-2d96-4049-aea3-8e5d75c1f5fa.png" width="600">
 
