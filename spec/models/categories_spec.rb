@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Category, type: :model do
   describe 'Category model' do
-    @user = User.create(name: 'Yuriy', email: 'yuriy@example.com', password: '123456')
+    @user = User.create(name: 'Olivier', email: 'olivier@example.com', password: '123456')
     subject { Category.new(user_id: @user, name: 'Sport', icon: 'Sport.png') }
     before { subject.save }
 

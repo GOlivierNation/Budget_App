@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Spendings', type: :model do
   describe 'Spending model' do
-    user = User.create(name: 'Yuriy', email: 'yuriy@example.com', password: '123456')
+    user = User.create(name: 'Olivier', email: 'olivier@example.com', password: '123456')
     Category.new(user_id: @user, name: 'Food', icon: 'Food.png')
     subject { Spending.new(user_id: user, name: 'Dinning out', amount: 60, category_id: 1) }
     before { subject.save }
